@@ -1,38 +1,11 @@
-
-
-body {
-    
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 20px;
-    
-  } 
-
-  .hero-video-container {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 100px); /* Ajuste si ton footer a une hauteur connue */
-  overflow: hidden;
-}
-
-.hero-video-container video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Le body prend 100% de hauteur pour fixer le footer en bas */
+html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  font: 1em sans-serif;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-}
-/* La vidéo occupe tout le body sauf le footer */
 .video-background-wrapper {
   position: fixed;
   top: 0;
@@ -40,8 +13,8 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  pointer-events: none; /* Empêche de bloquer les clics */
   overflow: hidden;
+  pointer-events: none;
 }
 
 .video-background-wrapper video {
@@ -54,80 +27,32 @@ body {
   object-fit: cover;
 }
 
-/* Le footer reste visible avec fond normal */
-footer {
+/* Pour que le footer soit toujours en bas */
+.page-content {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   position: relative;
   z-index: 1;
-  background-color: #111; /* ou autre couleur */
+  text-align: center;
+}
+
+main {
+  flex: 1; /* Le main prend l'espace restant */
+}
+
+footer {
+  background: #111;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
   color: white;
   padding: 2rem;
 }
-
-  
-
-  h1 {
-    display: flex;
-    color: #333;
-    font-size: 2.5em;
-    justify-content: center;
-    
-  }
-
-  .logo{
-    height:  80px;
-  }
-
-  p {
-    color: #333;
-    font-size: 1.2em;
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  nav  {
-    display: flex;
-    justify-content: space-between;
-  }
-
-    nav ul  {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        gap: 15px;
-        
-        
-    }
-
-    a {
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .video-background {
-        position: relative;
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-      }
-      
-      .video-background video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        transform: translate(-50%, -50%);
-        object-fit: cover;
-        z-index: -1;
-      }
-      
-      .video-background .content {
-        position: relative;
-        z-index: 1;
-        color: white;
-        text-align: center;
-        top: 40%;
-        transform: translateY(-40%);
-      }
-      
