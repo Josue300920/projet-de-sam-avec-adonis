@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samodel</title>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -15,12 +16,12 @@
             <div class="logo">
              <img src="/images/Group 1 (2).png" alt="logo">
             </div>
-            <button class="cart-button" id="cartButton">???? Cart (0)</button>
+            <button class="cart-button" id="cartButton">Rejoignez-Nous sur WhatsApp ! (0)</button>
         </nav>
     </header>
 
     <div class="offer-banner">
-        <div class="offer-text">???? Offer: 20% off storewide with code STREET20 ????</div>
+        <div class="offer-text">???? Devenez le Prochain Visage ! Coaching Photo Gratuit pour les Nouveaux Inscrits ????</div>
     </div>
 
     <section class="hero">
@@ -30,14 +31,81 @@
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            <h1>Urban Style Without Limits</h1>
-            <p>Discover the collection that defines the streets</p>
-            <button class="cta-button" id="ctaButton">View Products</button>
+            <h1>Dévoilez la Beauté, un Clic à la Fois</h1>
+            <p>Découvrez les visages qui façonnent la mode de demain, instantanément.</p>
+            <button class="cta-button" id="ctaButton">Rencontrez les Stars !</button>
         </div>
     </section>
-
+     <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+    <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+      <div class="slider__item">
+        <img class="slider__image" src="/images/kin  h 2.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Stan Vince</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/images/goma h2.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Card 2</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/images/kin h3.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Card 3</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/images/lushi  H1.jpg"  alt="Image">
+        <div class="slider__info">
+          <h2>Card 4</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/images/image 5.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Card 5</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/images/lushi H2.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Card 6</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/images/image 2.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Card 7</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/images/home  pic 2.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Card 8</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/images/pexels-jacky-hong-771747059-19137936 (1).jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Card 9</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <img class="slider__image" src="/images/pexels-shalom-ejiofor-2153542296-32807301.jpg" alt="Image">
+        <div class="slider__info">
+          <h2>Card 10</h2>
+        </div>
+      </div>
+    </div>
+    <div class="slider__nav" style="display: flex;justify-content: center;">
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+    </div>
+  </div>
     <section class="products container" id="productsSection">
-        <h2>Our Urban Collection</h2>
+        <h2 class="title_show">Our Urban Collection</h2>
         <div class="product-grid" id="productGrid"></div>
     </section>
 
@@ -52,6 +120,34 @@
             </div>
         </div>
     </div>
+    {{--  <div class="cards-wrapper">
+      <div class='cards'>
+        <img  src="/images/image 6.jpg" class='card card1' tabindex="-1">
+      
+        
+        <button class='card card2' tabindex="-1">
+          <h2>2</h2>   
+        </button>
+        <button class='card card4' tabindex="-1">
+          <h2>3</h2> 
+        </button> 
+        <button class='card card5' tabindex="-1">
+          <h2>4</h2>  
+        </button>
+         
+      </div>
+      <button class="arrow-btn arrow-btn-prev" tabindex="0">
+        <svg viewBox="0 0 256 512">
+          <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+        </svg>
+      </button>
+      <button class="arrow-btn arrow-btn-next" tabindex="0">
+        <svg viewBox="0 0 256 512">
+          <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+        </svg>
+      </button>
+
+    </div>  --}}
     <footer>
       <div class="text-align">
         <nav>
@@ -85,7 +181,7 @@
         </ul>
       </div>
     </footer>
-
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
    <script src="/js/models.js"></script>
-</body>
+</body> 
 </html>

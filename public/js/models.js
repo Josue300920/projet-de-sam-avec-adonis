@@ -1,6 +1,6 @@
  
         const products = [
-            { id: 1, name: "Oversized Hoodie", price: 49.99, sizes: ["S", "M", "L", "XL"], image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSn3Eole5q8r9URRqQys6T_ZI3U9qRaM5ZqUkE2E4p_z0dJdhWHIGNE4udCh0FemcF8avqu-ANV9ESCQkgFc4qN88iSUYimngGtd1ueCIt55yQ2vW2jDgq9" },
+            { id: 1, name: "Bryan picture", price: 49.99, sizes: ["S", "M", "L", "XL"], image: "/images/goma h2.jpg" },
             { id: 2, name: "Ripped Jeans", price: 59.99, sizes: ["28", "30", "32", "34"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTm-CRrAz71gdj69QqyObbVqIvdKE_cEt1aOjvpxqFOwcWpdi_oJrl3hLxSMeqIeAClHuWcZpp-ji3ohiSl085hvYVdSTKZhDaKfDRsEAf4cpJXl0iAWlIdQQ" },
             { id: 3, name: "Urban Sneakers", price: 79.99, sizes: ["38", "39", "40", "41", "42"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQXdL-nMbC61D5QGtvmMVAIO6pRLMOGKcAF0sTMT0Bvre86CZktqusEyKttpE8vs_u9oV4wX-wP8-LTLBB5pJ6t9EoH7NS5wjbLiTSLAs80mVDNpHcIDas-MWA" },
             { id: 4, name: "Flat Cap", price: 24.99, sizes: ["One Size"], image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTTBnXdvoAA4eKcbvX7Msl1FalPv2iil9G2_YaZLpjo20QJP7M3aoNVgeHFqWFwM9AcD4bPsopdTykZKqS22Vi9cZ7gaiJ6V0zJ-D2UWPIEhG2DhIDyPDsgaw" },
@@ -108,7 +108,7 @@
         }
 
         function sendOrderToWhatsApp() {
-            const phoneNumber = "1XXXXXXXXX"; // Country code followed by the phone number without spaces or symbols
+            const phoneNumber = "243837478790"; // Country code followed by the phone number without spaces or symbols
             let message = "New order:\n\n";
             cart.forEach(item => {
                 message += `${item.name} (Size: ${item.selectedSize}) - Quantity: ${item.quantity} - Price: $${(item.price * item.quantity).toFixed(2)}\n`;
@@ -149,4 +149,67 @@
                 }
             });
         });
+
+// Ici  c'est une autre forme d'affichage dynamique de carossel des photos de mannequins 
+
+// const arrowBtns = document.querySelectorAll('.arrow-btn');
+// const cardBtns = document.querySelectorAll('.card');
+// let currentCard = 2;
+// let dir = 1;
+// moveCards();
+
+// const applyPointerEffect = (btn, ease, shadow) => {
+//   btn.onpointerenter = () => gsap.to(btn, { ease, 'box-shadow': shadow });
+//   btn.onpointerleave = () => gsap.to(btn, { ease, 'box-shadow': '0 6px 8px #00000030' });
+// };
+
+// arrowBtns.forEach((btn, i) => {
+//   applyPointerEffect(btn, 'expo', '0 3px 4px #00000050');
+//   btn.onclick = () => {
+//     dir = (i == 0) ? 1 : -1;
+//     currentCard += (i === 0) ? -1 : 1;
+//     currentCard = Math.min(4, Math.max(0, currentCard));
+//     moveCards(0.75);
+//   };
+// });
+
+// cardBtns.forEach((btn, i) => {
+//   applyPointerEffect(btn, 'power3', () => (i === currentCard) ? '0 6px 11px #00000030' : '0 0px 0px #00000030');
+//   btn.onclick = () => {
+//     dir = (i < currentCard) ? 1 : -1;
+//     currentCard = i;
+//     moveCards(0.75);
+//   };
+// });
+
+// function moveCards(dur = 0) {
+//   gsap.timeline({ defaults: { duration: dur, ease: 'power3', stagger: { each: -0.03 * dir } } })
+//     .to('.card', {
+//       x: -270 * currentCard,
+//       y: (i) => (i === currentCard) ? 0 : 15,
+//       height: (i) => (i === currentCard) ? 270 : 240,
+//       ease: 'elastic.out(0.4)'
+//     }, 0)
+//     .to('.card', {
+//       cursor: (i) => (i === currentCard) ? 'default' : 'pointer',
+//       'box-shadow': (i) => (i === currentCard) ? '0 6px 11px #00000030' : '0 0px 0px #00000030',
+//       border: (i) => (i === currentCard) ? '2px solid #26a' : '0px solid #fff',
+//       background: (i) => (i === currentCard) ? 'radial-gradient(100% 100% at top, #fff 0%, #fff 99%)' : 'radial-gradient(100% 100% at top, #fff 20%, #eee 175%)',
+//       ease: 'expo'
+//     }, 0)
+//     .to('.icon svg', {
+//       attr: {
+//         stroke: (i) => (i === currentCard) ? 'transparent' : '#36a',
+//         fill: (i) => (i === currentCard) ? '#36a' : 'transparent'
+//       }
+//     }, 0)
+//     .to('.arrow-btn-prev, .arrow-btn-next', {
+//       autoAlpha: (i) => (i === 0 && currentCard === 0) || (i === 1 && currentCard === 4) ? 0 : 1
+//     }, 0)
+//     .to('.card h4', {
+//       y: (i) => (i === currentCard) ? 0 : 8,
+//       opacity: (i) => (i === currentCard) ? 1 : 0,
+//     }, 0);
+// }
+
   
