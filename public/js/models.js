@@ -6,6 +6,9 @@
             { id: 4, name: "Flat Cap", price: 24.99, sizes: ["One Size"], image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTTBnXdvoAA4eKcbvX7Msl1FalPv2iil9G2_YaZLpjo20QJP7M3aoNVgeHFqWFwM9AcD4bPsopdTykZKqS22Vi9cZ7gaiJ6V0zJ-D2UWPIEhG2DhIDyPDsgaw" },
             { id: 5, name: "Graffiti T-Shirt", price: 29.99, sizes: ["S", "M", "L", "XL"], image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTtG3XWnFPeCI5szSCFbmEhqV2L71SbervTSDPumXl9FwNARDYIQCmjwmRXvs537BaFaVS6a7dQEc2GagM_Otzj5tv_LvBO44ALchcAsBBq8q5Fn18KKHWikQ" },
             { id: 6, name: "Bomber Jacket", price: 89.99, sizes: ["S", "M", "L", "XL"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQc50gC22wJuEQlxEoEbsktP3qS5AVdacrkOsAzZsUZTYQncm5WmAHBqSCHRtTrj7EAApFnoDDAbJYjKTECUm9e817wdsX5PV6TMmmQPpHAMYCRxoapozf4MQ" },
+            { id: 7, name: "Bomber Jacket", price: 89.99, sizes: ["S", "M", "L", "XL"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQc50gC22wJuEQlxEoEbsktP3qS5AVdacrkOsAzZsUZTYQncm5WmAHBqSCHRtTrj7EAApFnoDDAbJYjKTECUm9e817wdsX5PV6TMmmQPpHAMYCRxoapozf4MQ" },
+            { id: 8, name: "Bomber Jacket", price: 89.99, sizes: ["cheveux noir", "180cm", "Teint noir", "80kg"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQc50gC22wJuEQlxEoEbsktP3qS5AVdacrkOsAzZsUZTYQncm5WmAHBqSCHRtTrj7EAApFnoDDAbJYjKTECUm9e817wdsX5PV6TMmmQPpHAMYCRxoapozf4MQ" },
+            { id: 9, name: "Bomber Jacket", price: 89.99, sizes: ["S", "M", "L", "XL"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQc50gC22wJuEQlxEoEbsktP3qS5AVdacrkOsAzZsUZTYQncm5WmAHBqSCHRtTrj7EAApFnoDDAbJYjKTECUm9e817wdsX5PV6TMmmQPpHAMYCRxoapozf4MQ" },
         ];
 
         let cart = [];
@@ -17,10 +20,11 @@
                     <img src="${product.image}" alt="${product.name}" class="product-image">
                     <div class="product-info">
                         <h3 class="product-name">${product.name}</h3>
-                        <p class="product-price">$${product.price.toFixed(2)}</p>
+                        
+                         
                         <div class="product-size">
                             <select id="size-${product.id}">
-                                <option value="">Select size</option>
+                                <option value="">Infos</option>
                                 ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
                             </select>
                         </div>

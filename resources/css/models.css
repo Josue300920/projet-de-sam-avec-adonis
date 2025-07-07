@@ -403,7 +403,7 @@ nav {
   display: flex;
   font-size: small;
   color: gray;
-  cursor: pointer;
+  cursor: none;
 }
 .hero-content {
   position: relative;
