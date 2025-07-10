@@ -1,14 +1,12 @@
  
         const products = [
-            { id: 1, name: "Bryan picture", price: 49.99, sizes: ["S", "M", "L", "XL"], image: "/images/goma h2.jpg" },
-            { id: 2, name: "Ripped Jeans", price: 59.99, sizes: ["28", "30", "32", "34"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTm-CRrAz71gdj69QqyObbVqIvdKE_cEt1aOjvpxqFOwcWpdi_oJrl3hLxSMeqIeAClHuWcZpp-ji3ohiSl085hvYVdSTKZhDaKfDRsEAf4cpJXl0iAWlIdQQ" },
-            { id: 3, name: "Urban Sneakers", price: 79.99, sizes: ["38", "39", "40", "41", "42"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQXdL-nMbC61D5QGtvmMVAIO6pRLMOGKcAF0sTMT0Bvre86CZktqusEyKttpE8vs_u9oV4wX-wP8-LTLBB5pJ6t9EoH7NS5wjbLiTSLAs80mVDNpHcIDas-MWA" },
-            { id: 4, name: "Flat Cap", price: 24.99, sizes: ["One Size"], image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTTBnXdvoAA4eKcbvX7Msl1FalPv2iil9G2_YaZLpjo20QJP7M3aoNVgeHFqWFwM9AcD4bPsopdTykZKqS22Vi9cZ7gaiJ6V0zJ-D2UWPIEhG2DhIDyPDsgaw" },
-            { id: 5, name: "Graffiti T-Shirt", price: 29.99, sizes: ["S", "M", "L", "XL"], image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTtG3XWnFPeCI5szSCFbmEhqV2L71SbervTSDPumXl9FwNARDYIQCmjwmRXvs537BaFaVS6a7dQEc2GagM_Otzj5tv_LvBO44ALchcAsBBq8q5Fn18KKHWikQ" },
-            { id: 6, name: "Bomber Jacket", price: 89.99, sizes: ["S", "M", "L", "XL"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQc50gC22wJuEQlxEoEbsktP3qS5AVdacrkOsAzZsUZTYQncm5WmAHBqSCHRtTrj7EAApFnoDDAbJYjKTECUm9e817wdsX5PV6TMmmQPpHAMYCRxoapozf4MQ" },
-            { id: 7, name: "Bomber Jacket", price: 89.99, sizes: ["S", "M", "L", "XL"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQc50gC22wJuEQlxEoEbsktP3qS5AVdacrkOsAzZsUZTYQncm5WmAHBqSCHRtTrj7EAApFnoDDAbJYjKTECUm9e817wdsX5PV6TMmmQPpHAMYCRxoapozf4MQ" },
-            { id: 8, name: "Bomber Jacket", price: 89.99, sizes: ["cheveux noir", "180cm", "Teint noir", "80kg"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQc50gC22wJuEQlxEoEbsktP3qS5AVdacrkOsAzZsUZTYQncm5WmAHBqSCHRtTrj7EAApFnoDDAbJYjKTECUm9e817wdsX5PV6TMmmQPpHAMYCRxoapozf4MQ" },
-            { id: 9, name: "Bomber Jacket", price: 89.99, sizes: ["S", "M", "L", "XL"], image: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQc50gC22wJuEQlxEoEbsktP3qS5AVdacrkOsAzZsUZTYQncm5WmAHBqSCHRtTrj7EAApFnoDDAbJYjKTECUm9e817wdsX5PV6TMmmQPpHAMYCRxoapozf4MQ" },
+            
+            { id: 1, name: "Shalom Mambweni", price: 89.99, sizes: ["Séances Photo", "Défilés de mode", "Vidéos publicitaires", "Mannequin de beauté","Autres"], image: "/images/pexels-shalom-ejiofor-2153542296-32807301.jpg" },
+            { id: 2, name: "Evodie Mansanga", price: 89.99, sizes: ["Séances Photo", "Défilés de mode", "Vidéos publicitaires", "Mannequin de beauté","Autres"], image: "/images/pexels-ojhonferreira-14038165.jpg" },
+            { id: 3, name: "Jeannette Mujinga", price: 89.99, sizes: ["Séances Photo", "Défilés de mode", "Vidéos publicitaires", "Mannequin de beauté","Autres"], image: "/images/pexels-jacky-hong-771747059-19137936 (1).jpg" },
+            { id: 4, name: "Déborah  Eyenga", price: 89.99, sizes: ["Séances Photo", "Défilés de mode", "Vidéos publicitaires", "Mannequin de beauté","Autres"], image: "/images/pexels-helin-gezer-903013644-31900651.jpg" },
+            { id: 5, name: "Pierrot Tshimanga", price: 89.99, sizes: ["Séances Photo", "Défilés de mode", "Vidéos publicitaires", "Mannequin de beauté","Autres"], image: "/images/kin  h 2.jpg" },
+            { id: 6, name: "Ketsia Tshabatshuba", price: 89.99, sizes: ["Séances Photo", "Défilés de mode", "Vidéos publicitaires", "Mannequin de beauté","Autres"], image: "/images/image 2.jpg" },
         ];
 
         let cart = [];
@@ -28,7 +26,7 @@
                                 ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
                             </select>
                         </div>
-                        <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+                        <button class="add-to-cart" data-id="${product.id}">Recrutez </button>
                     </div>
                 </div>
             `).join('');
@@ -45,7 +43,7 @@
             const selectedSize = sizeSelect.value;
 
             if (!selectedSize) {
-                alert('Please select a size');
+                alert('Veuillez sélectionner un service avant ');
                 return;
             }
 
@@ -59,17 +57,17 @@
 
             updateCartButton();
             event.target.classList.add('added');
-            event.target.textContent = 'Added!';
+            event.target.textContent = 'sélectionné !';
             setTimeout(() => {
                 event.target.classList.remove('added');
-                event.target.textContent = 'Add to Cart';
+                event.target.textContent = 'Sélectionné';
             }, 1000);
         }
 
         function updateCartButton() {
             const cartButton = document.getElementById('cartButton');
             const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            cartButton.textContent = `???? Cart (${totalItems})`;
+            cartButton.textContent = `???? Sélectionné (${totalItems})`;
         }
 
         function renderCart() {
@@ -77,7 +75,7 @@
             const cartTotal = document.getElementById('cartTotal');
 
             if (cart.length === 0) {
-                cartItems.innerHTML = '<p>Your cart is empty</p>';
+                cartItems.innerHTML = '<p>Votre sélection de mannequins est actuellement vide.</p>';
                 cartTotal.textContent = 'Total: $0.00';
                 return;
             }
@@ -86,7 +84,7 @@
                 <div class="cart-item">
                     <div class="cart-item-info">
                         <h3>${item.name}</h3>
-                        <p>Size: ${item.selectedSize}, Quantity: ${item.quantity}</p>
+                        <p>Service: ${item.selectedSize}, Heure: ${item.quantity}</p>
                     </div>
                     <div>
                         <p>$${(item.price * item.quantity).toFixed(2)}</p>
@@ -113,9 +111,9 @@
 
         function sendOrderToWhatsApp() {
             const phoneNumber = "243837478790"; // Country code followed by the phone number without spaces or symbols
-            let message = "New order:\n\n";
+            let message = "Nouveau recrutement:\n\n";
             cart.forEach(item => {
-                message += `${item.name} (Size: ${item.selectedSize}) - Quantity: ${item.quantity} - Price: $${(item.price * item.quantity).toFixed(2)}\n`;
+                message += `${item.name} (Service: ${item.selectedSize}) - Heure: ${item.quantity} - Paiement: $${(item.price * item.quantity).toFixed(2)}\n`;
             });
             const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
             message += `\nTotal: $${total.toFixed(2)}`;

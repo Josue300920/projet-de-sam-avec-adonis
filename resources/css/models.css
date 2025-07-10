@@ -224,20 +224,20 @@ nav {
 
 .add-to-cart {
   width: 100%;
-  background-color: #ecc94b;
-  color: black;
+  background-color: #000;
+  color: white;
   border: none;
   padding: 0.5rem;
   border-radius: 9999px;
   font-weight: bold;
   cursor: pointer;
   transition:
-    background-color 0.3s ease,
+    background-color  0.3s ease,
     transform 0.3s ease;
 }
 
 .add-to-cart:hover {
-  background-color: #d69e2e;
+  background-color: #4949479c;
   transform: scale(1.05);
 }
 
@@ -259,7 +259,8 @@ nav {
 }
 
 .cart-content {
-  background-color: #2d3748;
+  background-color: #fff;
+  color: black;
   padding: 2rem;
   border-radius: 0.5rem;
   max-width: 500px;
@@ -291,7 +292,7 @@ nav {
 
 .cart-item-info p {
   font-size: 0.875rem;
-  color: #a0aec0;
+  color: #767d86;
 }
 
 .remove-item {
@@ -330,7 +331,7 @@ nav {
 }
 
 .order-button {
-  background-color: #48bb78;
+  background-color: #14992a;
   color: white;
 }
 
@@ -339,7 +340,7 @@ nav {
 }
 
 .close-button {
-  background-color: #4a5568;
+  background-color: #000;
   color: white;
 }
 
@@ -429,6 +430,7 @@ nav {
   text-decoration: none;
   font-size: 1.2rem;
   gap: 0.5rem;
+  margin-bottom: 150px;
 
   letter-spacing: 0.2px;
 }

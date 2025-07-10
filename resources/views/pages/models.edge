@@ -16,7 +16,9 @@
             <div class="logo">
              <img src="/images/Group 1 (2).png" alt="logo">
             </div>
-            <button class="cart-button" id="cartButton">Rejoignez-Nous sur WhatsApp ! (0)</button>
+            <button class="cart-button" id="cartButton"> Demande WhatsApp express.
+
+ ! (0)</button>
         </nav>
     </header>
 
@@ -100,23 +102,23 @@
       </div>
     </div>
     <div class="slider__nav" style="display: flex;justify-content: center;">
-      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
-      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Précédent</button>
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Suivant</button>
     </div>
   </div>
     <section class="products container" id="productsSection">
-        <h2 class="title_show">Our Urban Collection</h2>
+        <h2 class="title_show">Bookez un mannequin instantanément</h2>
         <div class="product-grid" id="productGrid"></div>
     </section>
 
     <div class="cart-modal" id="cartModal">
         <div class="cart-content">
-            <h2 class="cart-title">Shopping Cart</h2>
+            <h2 class="cart-title">Détails de Votre Recrutement</h2>
             <div id="cartItems" class="cart-items"></div>
             <div id="cartTotal" class="cart-total"></div>
             <div class="cart-buttons">
-                <button class="cart-button order-button" id="orderButton">Order via WhatsApp</button>
-                <button class="cart-button close-button" id="closeCartButton">Close</button>
+                <button class="cart-button order-button" id="orderButton">Confirmez via WhatsApp</button>
+                <button class="cart-button close-button" id="closeCartButton">Fermez</button>
             </div>
         </div>
     </div>
